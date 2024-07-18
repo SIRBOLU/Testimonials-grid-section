@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 12px;
+  max-width:1100px;
+  height: 100vh;
+  margin: auto;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 1rem;
+}
+:root{
+  --moderate-violet:rgb(117, 65, 200);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+h3, p{
+  color: var(--light-gray);
+  line-height: 1.3rem;
+}
+h2{
+  color: var(--White);
+  padding-bottom: 1.5rem;
+  font-size: 16.5px;
+  line-height: 1.5rem;
+}
+.fade{
+  opacity: 50%;
+}
+.faint{
+  opacity: 70%;
+}
+.off-white{
+  color: var(--very-dark-blackish-blue);
+  opacity: 70%;
+}
+.special{
+  color: var(--very-dark-grayish-blue);
+}
+.py{
+  padding: 2rem;
+  border-radius: 10px;
+}
+.top{
+  display: flex;
+  padding-bottom: 1rem;
+}
+.title >p{
+  font-size: smaller;
+}
+.title >h3{
+  font-size: smaller;
+}
+.body>h2{
+  padding-right: 2.5rem;
+}
+#container{
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+#container .purple{
+  /* background-color: var(--moderate-violet); */
+  /* grid-auto-columns: minmax(100px,auto); */
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+#container .ash{
+  background-color: var(--very-dark-grayish-blue);
+  /* align-self: start; */
+  grid-column: 3;
+  grid-row: 1;
+}
+#container .gray{
+  background-color: var(--White);
+  grid-row: 1/3;
+}
+#container .white{
+  background-color: var(--White);
+}
+#container .black{
+  background-color: var(--very-dark-blackish-blue);
+  grid-column: 2/4;
+}
+
+.purple{
+  position: relative;  
+}
+
+.purple::after{
+  content: " ";
+  position: absolute;
+  background: url(/bg-pattern-quotation.svg) no-repeat center center/cover;
+  top:5%;
+  right: 20%;
+  width: 75px;
+  height: 75px;
+  z-index: -5;
+}
+.purple::before{
+  content: " ";
+  position: absolute;
+  background-color: var(--moderate-violet);
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; 
+  z-index: -10;
+}
